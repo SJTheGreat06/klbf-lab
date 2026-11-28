@@ -1,23 +1,25 @@
 <p align="center"><img src="docs/klbf/logo.svg" width="120" alt="KLBF Lab"></p>
 <h1 align="center">KLBF Lab</h1>
 <p align="center">
-  <a href="https://github.com/PastiiJay/klbf-lab/releases/latest"><img src="https://img.shields.io/badge/stable-v26.11.5-1f46c8" alt="stable: v26.11.5"></a>
-  <a href="#stable-v26115-28-nov-2026"><img src="https://img.shields.io/badge/BM--v1%20certified-30.2%20fps%20with%20frame%20generation%20(base%2016.0)-2ea44f" alt="BM-v1 certified: 30.2 fps with frame generation, base 16.0"></a>
-  <a href="#stable-v26115-28-nov-2026"><img src="https://img.shields.io/badge/real%20play-tested%20before%20release-2ea44f" alt="played in the open world before release"></a>
+  <a href="https://github.com/PastiiJay/klbf-lab/releases/latest"><img src="https://img.shields.io/badge/stable-v26.11.6-1f46c8" alt="stable: v26.11.6"></a>
+  <a href="#stable-v26116-28-nov-2026"><img src="https://img.shields.io/badge/BM--v1%20certified-30.2%20fps%20with%20frame%20generation%20(base%2016.0)-2ea44f" alt="BM-v1 certified: 30.2 fps with frame generation, base 16.0"></a>
+  <a href="#stable-v26116-28-nov-2026"><img src="https://img.shields.io/badge/real%20play-tested%20before%20release-2ea44f" alt="played in the open world before release"></a>
   <img src="https://img.shields.io/badge/license-GPL--3.0-555" alt="GPL-3.0">
   <a href="docs/klbf/MEASUREMENT.md"><img src="https://img.shields.io/badge/fps-shared%20measurement%20method-2ea44f" alt="shared measurement method"></a>
 </p>
 
-Runs the Xbox Series build of the title on a Windows PC, from your own copy. **Best on AMD Radeon** (tested on an RX 9070 XT), works on other DirectX 12 cards.
+Runs the Xbox Series build of the title on a Windows PC, from your own copy. **AMD Radeon, NVIDIA GeForce RTX and other DirectX 12 cards, no brand first:** each card gets every upscaler and frame generation that runs on it (Intel XeSS is on the way).
 **No game files here:** you need your own copy of the title.
 
-## Stable: v26.11.5 (28 Nov 2026)
+## Stable: v26.11.6 (28 Nov 2026)
 
-### [Download KLBF Lab v26.11.5 (KLBF-Lab.zip)](https://github.com/PastiiJay/klbf-lab/releases/latest/download/KLBF-Lab.zip)
+### [Download KLBF Lab v26.11.6 (KLBF-Lab.zip)](https://github.com/PastiiJay/klbf-lab/releases/latest/download/KLBF-Lab.zip)
 
 - **Auto-update:** one click, your saves and settings kept.
 - **Desktop shortcut,** like any game.
-- **A settings window with every option:** Profile X / S, AMD FSR 4, FSR 3.1 or the built-in upscaler, presets, output size, frame generation (FG x2), screen choice, window or borderless fullscreen.
+- **A settings window with every option:** Profile X / S, the built-in (console) upscaler (default), AMD FSR 4 or 3.1, **NVIDIA DLSS (new)**, presets, output size, frame generation (AMD FSR x2, **NVIDIA DLSS x2 to x6, new**), a 30 / 40 / 60 fps cap, screen choice, window or borderless fullscreen.
+- **Start your way (new):** the game menu, a new game, the autosave or any save slot, picked before Play; move saves up and down in the Saves tab.
+- **Launch options (new),** as on Steam: `KLBF_` / `VICTORY_` switches in the Experimental tab.
 - **Shaders prepared once,** with a real progress bar.
 - **Built-in benchmark** with certified cards you can share.
 - **Built-in save manager:** slots, a backup before every launch, restore, copy over.
@@ -30,11 +32,11 @@ Runs the Xbox Series build of the title on a Windows PC, from your own copy. **B
 **Start in 4 steps**
 
 1. **Extract** the zip anywhere, then open the "KLBF Lab" folder.
-2. **Double-click "KLBF Lab.cmd"** (Windows may hide the ".cmd" part). Later, use the desktop shortcut it can create.
+2. **Double-click "KLBF Lab"** (KLBF Lab.exe, no black window; "KLBF Lab.cmd" stays as a fallback). Later, use the desktop shortcut it can create.
 3. **Choose your game folder** (your own copy).
 4. **Play.**
 
-The first start prepares the shaders (one progress bar, once) and downloads two official components, each file checked: Microsoft's DirectX 12 Agility SDK and AMD FSR (FidelityFX SDK v2.4.0). KLBF Lab is not signed: if Windows SmartScreen shows up, click "More info" then "Run anyway". [Release page](https://github.com/PastiiJay/klbf-lab/releases/latest) (SHA-256 of each zip; [how to check it, or build it yourself](docs/klbf/VERIFY.md)) · source: branch [`stable-amd`](https://github.com/PastiiJay/klbf-lab/tree/stable-amd), tag `v26.11.5`. Already on v26.11.1 to v26.11.4? Click **Update** in the launcher.
+The first start prepares the shaders (one progress bar, once) and downloads two official components, each file checked: Microsoft's DirectX 12 Agility SDK and AMD FSR (FidelityFX SDK v2.4.0). KLBF Lab is not signed: if Windows SmartScreen shows up, click "More info" then "Run anyway". [Release page](https://github.com/PastiiJay/klbf-lab/releases/latest) (SHA-256 of each zip; [how to check it, or build it yourself](docs/klbf/VERIFY.md)) · source: branch [`stable-amd`](https://github.com/PastiiJay/klbf-lab/tree/stable-amd), tag `v26.11.6`. Already on v26.11.1 to v26.11.5? Click **Update** in the launcher.
 
 **Measured on our PC** (RX 9070 XT, Ryzen 7 9800X3D, 32 GB):
 
@@ -52,11 +54,18 @@ The first start prepares the shaders (one progress bar, once) and downloads two 
 | Video memory | 16 GB recommended |
 | RAM | 32 GB recommended |
 
-New in v26.11.5: trees, foliage, fences and posts no longer vanish or turn black (#142, #145), a crash fix in memory remapping, and after a bench Play starts a normal game again (#147). **New experimental switches, all off by default** (Settings, Experimental tab): memory, stutter and pipeline options from the community. Try them one at a time and tell us what changes on your PC. Earlier: keyboard and mouse, controller rumble, F8 overlay fixes, the intro crash (#69, #116), RX 6000 device loss at world load (#127). Everything, with every switch: **[CHANGELOG.md](https://github.com/PastiiJay/klbf-lab/blob/v26.11.5/CHANGELOG.md#v26115-28-nov-2026)**.
+New in v26.11.6: **NVIDIA DLSS** (Super Resolution, and frame generation x2 on RTX 40/50, x3 to x6 on RTX 50, through NVIDIA's official Streamline; never run on an RTX card yet, **NVIDIA testers wanted**), KLBF Lab.exe with no console window, Start modes and save moving, launch options, a 30/40/60 fps cap, **better frame rate** (Op-lite's 28 Nov work taken out again: it cost fps in play), the built-in upscaler by default, Clear shader cache without freezing, Copy JSON for bench posts, and launcher logs when shader preparation stops (#157, #161). Everything: **[CHANGELOG.md](https://github.com/PastiiJay/klbf-lab/blob/v26.11.6/CHANGELOG.md#v26116-28-nov-2026)**.
+
+**Known issues in v26.11.6**
+
+- **AMD FSR 4:** black planes can flash out from the character on water (boat, swimming) and in low sun. Not seen with the built-in upscaler, now the default. FSR 3.1 not checked yet.
+- **Green vehicles,** with every upscaler; they usually fade after a while.
+- **Speckled clothes and skin** in some places; cars can lose their paint after a time skip (sleep).
+- **NVIDIA DLSS** has never run on an RTX card: tell us how it goes.
 
 ## Benchmark
 
-KLBF Lab Bench BM-v1: 5 minutes, hands-off, wherever you like in the game, with a certified card at the end. Say where you were on your post (city, countryside, indoors, night...). [How to run it](docs/klbf/BENCH-BM-V1.md) · [results by hardware](docs/klbf/BAYSIDE-MORNING-V1.md) · post yours with the [Bench result form](https://github.com/PastiiJay/klbf-lab/issues/new?template=bench-bm-v1.yml).
+KLBF Lab Bench BM-v1: 5 minutes, hands-off, wherever you like in the game, with a certified card at the end. Say where you were (city, countryside, indoors, night...): the form has a box for it. [How to run it](docs/klbf/BENCH-BM-V1.md) · [results by hardware](docs/klbf/BAYSIDE-MORNING-V1.md) · post yours with the [Bench result form](https://github.com/PastiiJay/klbf-lab/issues/new?template=bench-bm-v1.yml).
 
 Issues and test reports: [this repository's issues](https://github.com/PastiiJay/klbf-lab/issues).
 
@@ -75,11 +84,20 @@ Everything we have seen and want to make better, from your reports and our own p
 - **Lower RAM use.**
 - **Ultrawide screens.**
 - **Launcher and bench** improvements.
-- **NVIDIA** support.
+- **NVIDIA DLSS** on real RTX cards (testers wanted).
+- **Intel XeSS** upscaling and frame generation, for every card that runs it.
+- **FSR 4 flashes** on water and in low sun.
 
 Seen something else? [Open an issue](https://github.com/PastiiJay/klbf-lab/issues).
 
 ## Credits
+
+**v26.11.6:**
+- **HandshakeHackin**: the preparation log (#157), the test fix (#158) and Copy JSON (#161).
+- **readmet3xt-lab/foxhound**, **Kemerd/VIctory-NVIDIA-RT** and **trustno1-coder/VIctory-NVIDIA**: the NVIDIA DLSS and frame generation code (GPL-3.0); **NVIDIA**: Streamline SDK and DLSS.
+- **RXplasm**, **SwanSong**, **Domi**, **iLLusion** and **P4ndemik**: the play reports behind this build.
+
+**Everyone who opened an issue, a pull request or commented here (74), thank you:** [a15106479638-hub](https://github.com/a15106479638-hub), [Adiker](https://github.com/Adiker), [Aphantasiac](https://github.com/Aphantasiac), [badcookie66](https://github.com/badcookie66), [BeegYoshiSaxman](https://github.com/BeegYoshiSaxman), [BlackBu7let](https://github.com/BlackBu7let), [BrokeAsh](https://github.com/BrokeAsh), [Catnip202X](https://github.com/Catnip202X), [Cdeshan1](https://github.com/Cdeshan1), [clems206](https://github.com/clems206), [d0dev](https://github.com/d0dev), [deydey103](https://github.com/deydey103), [diafebus](https://github.com/diafebus), [efsebayern](https://github.com/efsebayern), [elliot155](https://github.com/elliot155), [Emaxoso](https://github.com/Emaxoso), [Ethan-Hill](https://github.com/Ethan-Hill), [Evan-Lowry](https://github.com/Evan-Lowry), [Exorion1er](https://github.com/Exorion1er), [fivionHi](https://github.com/fivionHi), [Gabfrem](https://github.com/Gabfrem), [GamingEnding](https://github.com/GamingEnding), [Gatossss](https://github.com/Gatossss), [GiovanniFadanelli](https://github.com/GiovanniFadanelli), [Git-Uzair](https://github.com/Git-Uzair), [gmankab](https://github.com/gmankab), [GrandtheUK](https://github.com/GrandtheUK), [HandshakeHackin](https://github.com/HandshakeHackin), [Headache3318](https://github.com/Headache3318), [henryhugh098-ops](https://github.com/henryhugh098-ops), [HishamMuhammed](https://github.com/HishamMuhammed), [HvKThibaut](https://github.com/HvKThibaut), [idkwtftonamemyself](https://github.com/idkwtftonamemyself), [JappertjeV](https://github.com/JappertjeV), [jeemailtrevor22-cmy](https://github.com/jeemailtrevor22-cmy), [jstrong0530](https://github.com/jstrong0530), [Kal0s-design](https://github.com/Kal0s-design), [KingKaom](https://github.com/KingKaom), [Kurizek27](https://github.com/Kurizek27), [kzrts](https://github.com/kzrts), [leahcornelius](https://github.com/leahcornelius), [MalarkZA](https://github.com/MalarkZA), [mayauxpaul8-droid](https://github.com/mayauxpaul8-droid), [meshahid973](https://github.com/meshahid973), [MesrineNathanael](https://github.com/MesrineNathanael), [MilkManJackal](https://github.com/MilkManJackal), [MiniKula](https://github.com/MiniKula), MMTester…IV, [narimantos](https://github.com/narimantos), [NicolaasZA](https://github.com/NicolaasZA), [ParaNyx](https://github.com/ParaNyx), [percyjjfoster197-del](https://github.com/percyjjfoster197-del), [Proudnoob4](https://github.com/Proudnoob4), [robzombie91](https://github.com/robzombie91), [seth1295](https://github.com/seth1295), [Sgt-Ente](https://github.com/Sgt-Ente), [SousaTrashBin](https://github.com/SousaTrashBin), [spooksX](https://github.com/spooksX), [spy0eye-beep](https://github.com/spy0eye-beep), [TaynanGT](https://github.com/TaynanGT), [TG0000](https://github.com/TG0000), [TheExe21](https://github.com/TheExe21), [tywri3922](https://github.com/tywri3922), [v3xti](https://github.com/v3xti), [Vladimir-Human](https://github.com/Vladimir-Human), [vShotv](https://github.com/vShotv), [welisonzika14-jpg](https://github.com/welisonzika14-jpg), [wilsonwilsonlg](https://github.com/wilsonwilsonlg), [WyrchikDev](https://github.com/WyrchikDev), [XxSolarrxX](https://github.com/XxSolarrxX), [ZepRot](https://github.com/ZepRot), [Zjbs1989](https://github.com/Zjbs1989), [zocram4cc](https://github.com/zocram4cc), [ZutphenAu](https://github.com/ZutphenAu).
 
 **v26.11.5:**
 - **Op-lite** (via [FilipGra24/OP-lite](https://github.com/FilipGra24/OP-lite)): the 28 Nov work, every new switch off by default.
