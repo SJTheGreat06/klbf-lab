@@ -65,7 +65,7 @@ New in v26.11.6: **NVIDIA DLSS** (Super Resolution, and frame generation x2 on R
 
 ## Benchmark
 
-KLBF Lab Bench BM-v1: 5 minutes, hands-off, wherever you like in the game, with a certified card at the end. Say where you were (city, countryside, indoors, night...): the form has a box for it. [How to run it](docs/klbf/BENCH-BM-V1.md) · [results by hardware](docs/klbf/BAYSIDE-MORNING-V1.md) · post yours with the [Bench result form](https://github.com/PastiiJay/klbf-lab/issues/new?template=bench-bm-v1.yml).
+KLBF Lab Bench: **5, 15, 30 or 60 minutes**, hands-off, wherever you like in the game and in whatever way you like, with a certified card at the end. Say where you were (city, countryside, indoors, night...): the form has a box for it. [How to run it](docs/klbf/BENCH-BM-V1.md) · [results by hardware](docs/klbf/BAYSIDE-MORNING-V1.md) · post yours with the [Bench result form](https://github.com/PastiiJay/klbf-lab/issues/new?template=bench-bm-v1.yml).
 
 Issues and test reports: [this repository's issues](https://github.com/PastiiJay/klbf-lab/issues).
 
