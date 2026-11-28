@@ -32,6 +32,13 @@ body:
       render: json
     validations:
       required: true
+  - type: input
+    id: where
+    attributes:
+      label: Where did you run it?
+      description: Optional. In your own words, where you were and what you did (for example "open world, on foot", "driving", "indoors after the intro"). Keep it generic, no game names.
+    validations:
+      required: false
   - type: textarea
     id: card
     attributes:
